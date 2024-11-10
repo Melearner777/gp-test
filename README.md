@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Online HOTEL Booking System with Review</h1>
+<h1>Online HOTEL Booking System </h1>
 
 <p><strong>GUVI Project for Sem-III B.Tech</strong><br>
 A web-based Hotel Management System designed to streamline hotel operations, allowing admins to manage customer bookings, room availability, staff details, and other hotel-related services efficiently.</p>
