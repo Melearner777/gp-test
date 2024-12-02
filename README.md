@@ -76,7 +76,7 @@ cd hotel-management-system
 <ol>
   <li><strong>Database Connection</strong>:<br>
     Update the database connection string in <code>conn.java</code>:
-    <pre><code>String connectionurl = "jdbc:mysql://localhost:3306/hotel_management?user=root&password=&lt;@avengers1234COC&gt;";
+    <pre><code>String connectionurl = "jdbc:mysql://localhost:3306/hotel_management?user=root&password=&lt;802301&gt;";
 </code></pre>
   </li>
 
