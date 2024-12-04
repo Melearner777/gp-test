@@ -1,0 +1,22 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+img {
+    width: 90%; /* Ensures the image fits the container width */
+    height: calc(110vh - px); /* Dynamically adjusts to window height minus the header */
+    object-fit: cover; /* Keeps the image proportion intact */
+    border-radius: 8px;
+}
