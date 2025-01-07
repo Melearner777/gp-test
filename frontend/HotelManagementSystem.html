@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Serif', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            color: white;
+            font-size: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
+            align-self: flex-start;
+        }
+
+        .button {
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            color: magenta;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .button:hover {
+            background-color: magenta;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="icons/first.jpg" alt="Background Image" class="background-image">
+        <div class="overlay">
+            <h1 id="text" class="title">HOTEL MANAGEMENT SYSTEM</h1>
+            <button id="next" class="button">Next</button>
+        </div>
+    </div>
+    <script>
+        // Blinking effect for the title
+        const text = document.getElementById("text");
+        let visible = true;
+
+        setInterval(() => {
+            visible = !visible;
+            text.style.visibility = visible ? "visible" : "hidden";
+        }, 500);
+
+        // Next button functionality
+        const nextButton = document.getElementById("next");
+        nextButton.addEventListener("click", () => {
+            // Redirect to the login page
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

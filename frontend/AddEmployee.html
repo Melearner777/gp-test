@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .gender input {
+            margin: 0;
+        }
+
+        .gender label {
+            display: inline-block;
+            margin: 0;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Employee Details</h1>
+        <form id="employeeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label>Gender:</label>
+            <div class="gender">
+                <label>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    Female
+                </label>
+            </div>
+
+            <label for="job">Job:</label>
+            <select id="job" name="job" required>
+                <option value="Front Desk Clerks">Front Desk Clerks</option>
+                <option value="Porters">Porters</option>
+                <option value="Housekeeping">Housekeeping</option>
+                <option value="Kitchen Staff">Kitchen Staff</option>
+                <option value="Room Service">Room Service</option>
+                <option value="Waiter/Waitress">Waiter/Waitress</option>
+                <option value="Manager">Manager</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Chef">Chef</option>
+            </select>
+
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="salary" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="aadhar">Aadhar:</label>
+            <input type="text" id="aadhar" name="aadhar" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="button" onclick="saveEmployee()">Save</button>
+        </form>
+    </div>
+
+    <script>
+        function saveEmployee() {
+            const form = document.getElementById('employeeForm');
+
+            // Collect form data
+            const formData = {
+                name: form.name.value,
+                age: form.age.value,
+                gender: form.gender.value,
+                job: form.job.value,
+                salary: form.salary.value,
+                phone: form.phone.value,
+                aadhar: form.aadhar.value,
+                email: form.email.value,
+            };
+
+            // Validation
+            if (!formData.gender) {
+                alert('Please select a gender.');
+                return;
+            }
+
+            // Display data (or send to backend via AJAX/Fetch API)
+            console.log('Employee Data:', formData);
+            alert('Employee added successfully!');
+            form.reset();
+        }
+    </script>
+</body>
+</html>

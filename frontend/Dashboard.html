@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Hotel Management Dashboard</h1>
+        <div class="stats">
+            <div class="card">
+                <h2>Total Employees</h2>
+                <p id="total-employees">Loading...</p>
+            </div>
+            <div class="card">
+                <h2>Available Rooms</h2>
+                <p id="available-rooms">Loading...</p>
+            </div>
+            <div class="card">
+                <h2>Total Customers</h2>
+                <p id="total-customers">Loading...</p>
+            </div>
+            <div class="card">
+                <h2>Total Departments</h2>
+                <p id="total-departments">Loading...</p>
+            </div>
+        </div>
+        <h2>Departments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Budget</th>
+                </tr>
+            </thead>
+            <tbody id="departments-table">
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
